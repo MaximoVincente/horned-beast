@@ -11,7 +11,7 @@ class Main extends React.Component {
             <>
                 <div>
                     <HornedBeast src={rhino} alt={'Rhino Image'} title= {'Rhino'}
-                    description= {'One horn to rule them all!'}/>
+                    description= {'The name rhinoceros is greek for rhino (nose), and ceros(horn).'}/>
                 </div>
                 <div>
                     <HornedBeast src={highland} alt={'Highland Cow'} title={'Highland Cow'}
