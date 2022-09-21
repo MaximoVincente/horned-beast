@@ -12,9 +12,9 @@ class Main extends React.Component {
             <>
                 <Container>
                     <Row lg={4}>
-                        {data.map((hBeast, index) => {
+                        {data.map((hBeast) => {
                             return (<Col classname="mb-3"><HornedBeast src={hBeast.image_url} description={hBeast.description}
-                                title={hBeast.title} key={index} /></Col>)
+                                title={hBeast.title} setShowModalTrue={this.props.setShowModalTrue} key={hBeast._id} id={hBeast._id} /></Col>)
                         })}
                     </Row>
                 </Container>
