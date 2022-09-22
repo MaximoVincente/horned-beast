@@ -22,17 +22,21 @@ class HornedBeast extends React.Component {
 
     render() {
         return (
-            <Card style={{ width: "18rem"}} className="h-100 mx-auto px-1">
+            <>
+            <Card style={{ width: "15rem"}} className="h-100 mx-auto my-1 px-1" bg='info' border='dark'>
+                <Card.Header className='h-auto'>
+                    <Card.Title className='fw-bolder font-monospace'>{this.state.title}</Card.Title>
+                </Card.Header>
                 <Card.Img className='py-1 h-50 m-auto' variant="top" src={this.state.src} onClick={() => {
                     this.props.setShowModalTrue(this.props.id);
                 }}/>
                 <Card.Body>
                     <Spinner animation="grow" />
-                    <Card.Title>{this.state.title}</Card.Title>
-                    <Card.Text className="fst-italic">{this.state.description}</Card.Text>
-                    <Button className='mb-3' variant="secondary" onClick={this.handleClick}>Go somewhere</Button>
+                    <Card.Text className="fw-normal">{this.state.description}</Card.Text>
+                    <Button className='mb-3 font-monospace' variant="success" onClick={this.handleClick}>Favorite</Button>
                 </Card.Body>
             </Card>
+            </>
         );
   }
 }
