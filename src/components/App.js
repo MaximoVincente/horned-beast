@@ -5,6 +5,7 @@ import Main from './Main.js';
 import Footer from './Footer.js';
 import data from '../data.json';
 import SelectedBeast from './SelectedBeast.js';
+import BeastForm from './BeastForm.js';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../custom.scss";
 
@@ -14,6 +15,7 @@ class App extends React.Component {
     this.state = {
       showModal: false,
       selectedBeast: {},
+      renderedBeasts: data,
     };
   }
 
@@ -29,12 +31,22 @@ class App extends React.Component {
     this.setState({ showModal: false });
   }
 
+  //BeastForm Component
+
+  handleForm = (event) => {
+    event.preventDefault();
+    const selectedHorns =parseInt(event.target.value);
+    const filteredBeasts = data.filter(hBeast => hBeast.horns === selectedHorns);
+    this.setState({renderedBeasts:filteredBeasts});
+
+  };
 
   render() {
     return (
       <>
         <Header />
-        <Main setShowModalTrue={this.setShowModalTrue} setShowModalFalse={this.setShowModalFalse}/>
+        <BeastForm handleForm={this.handleForm}/>
+        <Main setShowModalTrue={this.setShowModalTrue} setShowModalFalse={this.setShowModalFalse} handleForm={this.handleForm} renderedBeasts={this.state.renderedBeasts}/>
         <SelectedBeast showModal={this.state.showModal} setShowModalFalse={this.setShowModalFalse} selectedBeast={this.state.selectedBeast} />
         <Footer />
       </>
