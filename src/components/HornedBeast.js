@@ -11,6 +11,8 @@ class HornedBeast extends React.Component {
             description: this.props.description,
             src: this.props.src,
             title: this.props.title,
+            keyword: this.props.keyword,
+            horns: this.props.horns,            
         }
     }
 
