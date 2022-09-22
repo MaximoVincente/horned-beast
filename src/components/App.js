@@ -1,10 +1,12 @@
 import React from 'react';
+import '../App.css';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
-import data from '../data.json'
+import data from '../data.json';
 import SelectedBeast from './SelectedBeast.js';
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../custom.scss";
 
 class App extends React.Component {
   constructor(props) {
