@@ -22,3 +22,10 @@
 - Start time: `8:09pm EST`
 - Finish time: `8:32pm EST`
 - Actual time needed to complete: `23 minutes`
+
+## Display a Modal feature
+
+- Estimate of time needed to complete: `3 hrs`
+- Start time: `4:02pm EST`
+- Finish time: `6:49pm EST`
+- Actual time needed to complete: `2 hours and 47 minutes`
