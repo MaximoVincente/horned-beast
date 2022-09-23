@@ -36,9 +36,13 @@ class App extends React.Component {
   handleForm = (event) => {
     event.preventDefault();
     const selectedHorns =parseInt(event.target.value);
-    const filteredBeasts = data.filter(hBeast => hBeast.horns === selectedHorns);
+    let filteredBeasts
+    if (selectedHorns){
+    filteredBeasts = data.filter(hBeast => hBeast.horns === selectedHorns);
+    }else{
+      filteredBeasts = data
+    }
     this.setState({renderedBeasts:filteredBeasts});
-
   };
 
   render() {
